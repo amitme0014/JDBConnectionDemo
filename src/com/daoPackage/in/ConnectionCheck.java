@@ -8,9 +8,9 @@ public class ConnectionCheck {
 
 	public static void main(String[] args) {
 		
-		DBConnection dbConn=new DBConnection();
+		DBConnection dbConn=new DBConnection();    //To use the method we created an object
 		
-		Connection conn=dbConn.getConnection();
+		Connection conn=dbConn.getConnection();   //Used the method
 		
 		if(conn!=null) {
 			

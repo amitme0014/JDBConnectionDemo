@@ -14,8 +14,8 @@ public class DBConnection {
 	
 	static {
 		try {
-			Class.forName(DB_DRIVER_CLASS);
-			connection=DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+			Class.forName(DB_DRIVER_CLASS);    //loading the driver class
+			connection=DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD); //getting the connection
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -23,7 +23,7 @@ public class DBConnection {
 		}
 	}
 	
-	public Connection getConnection() 
+	public Connection getConnection()   //This method will return the connection, which we are getting above in static method
 	{
 		return connection;
 	};
